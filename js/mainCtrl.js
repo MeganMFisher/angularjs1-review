@@ -10,9 +10,9 @@ angular.module('app').controller('mainCtrl', ($scope) => {
    }
     
    $scope.addNewHire = (newHire) => {
-       console.log(newHire)
-       if(newHire) {
-           $scope.newEmployees.push(newHire)
+       var employee = Object.assign({}, newHire)
+       if(employee) {
+           $scope.newEmployees.push(employee)
        }
    }
 
